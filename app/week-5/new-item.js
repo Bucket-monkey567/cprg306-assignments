@@ -32,7 +32,7 @@ export default function NewItem(){
             quantity: quantity,
             category: category
         }
-        console.log(`Added ${item.quantity} ${item.name} to category ${item.category}`);
+        console.log(`Item submitted:`, item);
         alert(`Added ${item.quantity} ${item.name} to category ${item.category}`);
         setName("");
         setCategory("produce");
