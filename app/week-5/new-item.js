@@ -18,7 +18,7 @@ export default function NewItem(){
         }
     }
 
-    const handleSumbit = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
         if(name === ""){
             alert("Please enter a name for the item");
@@ -32,7 +32,7 @@ export default function NewItem(){
 
     return(
         <section>
-            <form onSubmit={handleSumbit} className="m-2.5 p-2 border-2 border-fuchsia-300 rounded-md">
+            <form onSubmit={handleSubmit} className="m-2.5 p-2 border-2 border-fuchsia-300 rounded-md">
                 <input className="m-2.5 p-2 border-2 border-fuchsia-300 rounded-md" type="text" placeholder="Item Name" value={name} onChange={(e) => setName(e.target.value)} />
                 <select className="m-2.5 p-2 border-2 border-fuchsia-300 rounded-md bg-black text-white" value={category} onChange={(e) => setCategory(e.target.value)}>
                     <option value="produce">Produce</option>
