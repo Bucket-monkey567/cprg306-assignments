@@ -5,7 +5,6 @@ export default function NewItem(){
     const [name, setName] = useState("");
     const [category, setCategory] = useState("produce");
     var [quantity, setQuantity] = useState(1);
-
     const decrement = () => {
         if(quantity > 1){
             setQuantity(quantity - 1);
@@ -24,6 +23,7 @@ export default function NewItem(){
             alert("Please enter a name for the item");
             return;
         }
+        console.log(`Added ${quantity} ${name} to category ${category}`);
         alert(`Added ${quantity} ${name} to category ${category}`);
         setName("");
         setCategory("produce");
@@ -42,6 +42,12 @@ export default function NewItem(){
                     <option value="canned goods">Canned Goods</option>
                     <option value="dry goods">Dry Goods</option>
                     <option value="household">Household</option>
+                    <option value="bakery">Bakery</option>
+                    <option value="frozen foods">Frozen Foods</option>
+                    <option value="Beverages">Beverages</option>
+                    <option value="snacks">Snacks</option>
+                    <option value="other">Other</option>
+                    
                 </select>
             {/* Quantity buttons */}
                 <h2 className="m-2.5">Quantity: {quantity}</h2>
