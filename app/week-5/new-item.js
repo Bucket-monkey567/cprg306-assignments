@@ -27,8 +27,13 @@ export default function NewItem(){
             alert("Please enter a name for the item");
             return;
         }
-        console.log(`Added ${quantity} ${name} to category ${category}`);
-        alert(`Added ${quantity} ${name} to category ${category}`);
+        const item = {
+            name: name,
+            quantity: quantity,
+            category: category
+        }
+        console.log(`Added ${item.quantity} ${item.name} to category ${item.category}`);
+        alert(`Added ${item.quantity} ${item.name} to category ${item.category}`);
         setName("");
         setCategory("produce");
         setQuantity(1);
