@@ -41,8 +41,8 @@ export default function NewItem(){
             {/* Quantity buttons */}
                 <h2 className="m-2.5 text-black">Quantity: {quantity}</h2>
                 <section className="flex flex-row">
-                    <button className={`${buttonColorMin} text-white mx-2 px-10 py-1 rounded-md`} onClick={decrement}>-</button>
-                    <button className={`${buttonColorMax} text-white mx-2 px-10 py-1 rounded-md`} onClick={increment}>+</button>
+                    <button className={`${buttonColorMin} text-white mx-2 p-2 py-0.5 px-10 rounded-md`} onClick={decrement}>-</button>
+                    <button className={`${buttonColorMax} text-white mx-2 p-2 py-0.5 px-10 rounded-md`} onClick={increment}>+</button>
                     {/* Category dropdown */}
                     <select className="m-2.5 p-2 border-2 border-blue-400 rounded-md bg-white text-black" value={category} onChange={(e) => setCategory(e.target.value)}>
                         <option value="produce">Produce</option>
