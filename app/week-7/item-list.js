@@ -4,12 +4,12 @@ import Item from "./item";
 export default function ItemList({items}) {
     const [sortBy, setSortBy] = useState("name");
 
-    // let itemsCopy = [...items];
+    let itemsCopy = [...items];
 
     if (sortBy === 'name') {
-        items.sort((a,b) => a.name.localeCompare(b.name));
+        itemsCopy.sort((a,b) => a.name.localeCompare(b.name));
     } else if (sortBy === 'category') {
-        items.sort((a,b) => a.category.localeCompare(b.category));
+        itemsCopy.sort((a,b) => a.category.localeCompare(b.category));
     }
 
     return (
@@ -26,7 +26,7 @@ export default function ItemList({items}) {
                 </button>
             </div>
             <ul>
-                {items.map((item) => (
+                {itemsCopy.map((item) => (
                     <Item
                     key={item.id}
                     name={item.name}

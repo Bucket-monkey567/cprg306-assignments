@@ -13,16 +13,12 @@ export default function Page() {
         setItems([...items, item]);
     }
 
-
-
-
     return (
         <div className="flex justify-center items-center">
             <main >
                 <h1 className="bg-cyan-200 text-cyan-950 text-4xl p-4 w-1/1.5 m-2 rounded-2xl">Shopping list</h1>
                 <NewItem onAddItem={handleAddItem}/>
                 <ItemList items={items}/>
-                {/* <h1 className="text-blue-400 text-4xl p-4 w-1/1.5 m-2">Shopping List</h1> */}
             </main>
         </div>
     );
