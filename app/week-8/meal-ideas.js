@@ -24,7 +24,7 @@ export default function MealIdeas({ingredient}) {
     return (
         <div>
             <h2 className="text-2xl font-bold mb-4">Meal Ideas</h2>
-            <ul>
+            <ul className="flex flex-wrap gap-4"> 
                 {mealIdeas.map((meal) => (
                     <li key={meal.idMeal}>
                     <img
