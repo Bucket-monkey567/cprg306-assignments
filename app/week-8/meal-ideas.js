@@ -1,7 +1,7 @@
 "use client";
-import { useState, useEffect, use } from "react";
+import { useState, useEffect } from "react";
 
-export default function MealIdeas() {
+export default function MealIdeas({ingredient}) {
     const [mealIdeas, setMealIdeas] = useState([]);
     
     //fetch data from the MealDN
