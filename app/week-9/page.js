@@ -7,9 +7,7 @@ import Link from "next/link";
 
 export default function Page() {
 // Use the useUserAuth hook to get the user object and the login and logout functions
-const { user, loading, gitHubSignIn, logOut } = useUserAuth();
-const firebaseSignOut = logOut;
-
+const { user, loading, gitHubSignIn, firebaseSignOut } = useUserAuth();
 
 async function HandleSignIn() {
     try {
@@ -35,17 +33,17 @@ return (
         <section>
             {user ? (
                 <div>
-                    // Display some of the user's information
-                    <p>Welcome, {user.displayName} ({user.email}).</p>
-                    <button onClick={handleSignOut}>Sign Out</button>
+                    <p className="font-bold p-2">Welcome, {user.displayName} ({user.email}).</p>
+                    <button onClick={handleSignOut} className="text-xl font-bold m-2 bg-slate-600 border-r-white border-2 rounded-md">Sign Out</button>
+                    <br />
                     <Link href="/week-9/shopping-list">
-                        <button>Go to Shopping List</button>
+                        <button className="text-xl font-bold m-2 bg-sky-500 border-r-white border-2 rounded-md">Go to Shopping List</button>
                     </Link>
                 </div>
             ) : (
                 <div>
-                    <p>Please sign in.</p>
-                    <button onClick={HandleSignIn}>Sign In with GitHub</button>
+                    <p className="font-bold p-2">Please sign in.</p>
+                    <button onClick={HandleSignIn} className="text-xl font-bold m-2 bg-slate-600 border-r-white border-2 rounded-md">Sign In with GitHub</button>
                 </div>
             )}
         </section>
